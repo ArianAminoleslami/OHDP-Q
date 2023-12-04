@@ -1,0 +1,16 @@
+variable,databaseStart,variableStart,typeStart,typeEnd,recStart,recEnd,catStartLabel,catLabel,catLabelLong,Notes
+DAYSSUPL,ODB,ODB::DaysSupplied,cont,cont,else,copy,NA,NA,NA,NA
+NOSUBST,ODB,ODB::NoSubstitution_Ind,cat,cat,else,copy,NA,NA,NA,NA
+PLANCODE,ODB,ODB::PlanCode,cat,cat,else,copy,NA,NA,NA,https://datadictionary.ices.on.ca/Applications/DataDictionary/Variables.aspx?LibName=ODB&MemName=&Variable=PLANCODE
+AG_FSA,ODB,ODB::AgencyFSA,cat,cat,else,copy,NA,NA,NA,NA
+DIN,ODB,ODB::DIN,cat,cat,else,copy,NA,NA,NA,NA
+LTC,ODB,ODB::LTC_Flag,cat,cat,else,copy,NA,NA,NA,NA
+PCG9,ODB,ODB::PCG9,cat,cat,else,copy,NA,NA,NA,NA
+QUANTITY,ODB,ODB::Quantity,cat,cat,else,copy,NA,NA,NA,NA
+AG_I,ODB,ODB::AgencyID,cat,cat,else,copy,NA,NA,NA,NA
+AG_CNTY,ODB,ODB::AgencyCounty,cat,cat,else,copy,NA,NA,NA,https://datadictionary.ices.on.ca/Applications/DataDictionary/Variables.aspx?LibName=ODB&MemName=&Variable=AG_CNTY
+AGTYPE,ODB,ODB::AgencyType,cat,cat,else,copy,NA,NA,NA,https://datadictionary.ices.on.ca/Applications/DataDictionary/Variables.aspx?LibName=ODB&MemName=&Variable=AGTYPE
+LU_REAS,ODB,ODB::LimitedUseReason,cat,cat,else,copy,NA,NA,NA,NA
+ServiceDate,ODB,ODB::ServiceDate,cont,cont,else,copy,NA,NA,NA,NA
+HDP_PTN,DAD,DAD::HDP_PTN,cont,cat,"[0,Inf]",copy,NA,NA,NA,unique identifier
+ADHRecord_Key,DAD,DAD::ADHRecord_Key,cont,cat,else,copy,NA,NA,NA,NA
