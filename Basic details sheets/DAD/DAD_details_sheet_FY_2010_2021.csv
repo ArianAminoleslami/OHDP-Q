@@ -1,0 +1,390 @@
+variable,databaseStart,variableStart,typeStart,typeEnd,recStart,recEnd,catStartLabel,catLabel,catLabelLong,Notes
+INST_NUM,DAD,DAD::INST_NUM,cat,cat,else,copy,NA,NA,NA,"A five-character code assigned to a reporting facility by a provincial/ territorial ministry of health identifying the facility and the level of care of the data submitted.
+Facility identification number unique to each province/territory.  Mandatory"
+YEAR,DAD,DAD::FISCAL_YEAR,cont,cont,else,copy,NA,NA,NA,fiscal year. Name changed according to ICES
+ADM_DATE,DAD,DAD::ADM_DATE,cont,cont,else,copy,NA,NA,NA,"Admission date.  If it's a continous number,It's the number of days from ""01-01-1970"". Name changed according to ICES."
+ADMTIME,DAD,DAD::ADM_TIME,cat,cat,else,copy,NA,NA,NA,Admission time.
+INSTFTYP,DAD,DAD::INST_FROM_TYPE,cat,cat,else,copy,NA,NA,NA,"0 = Community Based Clinic
+1 = Acute Inpatient Care
+2 = Inpatient Rehabilitation
+3 = Inpatient Complex Continuing Care
+4 = Long-term care (24-hour nursing care)
+5 = Inpatient Psychiatry (Mental Health)
+6 = Nursing Stations
+7 = Special Rehabilitation Facility
+8 = Home Care Program
+9 = Inpatient Palliative Care
+A = Day Surgery
+B = Private Clinic
+C = Correctional Facility
+E = Emergency Department
+F = Other health facility
+G = Group Living/Supportive Housing
+H = Transitional Housing
+J = Other non-health facility
+M = Community Mental Health and Addiction Services
+N = Ambulatory Care Clinic
+P = Hospice/Palliative Care Facility
+S = Sub-Acute
+T = Mental Health and/or Addiction Treatment Centre
+U = Unknown facility 
+*Name changed according to ICES"
+INSTFNUM,DAD,DAD::INST_FROM_NUM,cat,cat,else,copy,NA,NA,NA,"The number assigned by the provincial/territorial Ministry or Department of Health of the facility from which the patient was directly transferred for further treatment or care. 
+This can be another health care facility or another level of care within the report facility.  Includes transfers from home care and nursing homes. 
+*Name changed according to ICES"
+ADMCAT,DAD,DAD::ADMIT_CATEGORY,cat,cat,else,copy,NA,NA,NA,"Admit Category describes the initial status of the patient at the time of admission to the reporting facility. Mandatory.
+U -  Emergent/Urgent
+L  - Elective
+N - Refer to province/territorial directives as may include, born enroute, at home within 24 hours of life and some other scenarios.
+S  -  Stillbirth (in the reporting hospital)
+R  -  Cadaver (admitted for organ/tissue retrieval purposes)
+*Name changed according to ICES"
+READMIT,DAD,DAD::READM_CODE,cat,cat,else,copy,NA,NA,NA,"1 = Planned readmission from previous acute care (no time restriction)
+2 = Unplanned readmission <= 7 days from previous acute admission within the same reporting facility and readmission diagnosis is the same/related to the previous admission
+3 = Unplanned readmission 8 – 28 days from previous acute admission within the same reporting facility and readmission diagnosis is the same/related to the previous admission
+4 = Unplanned readmission <= 7 days from previous same day surgery admission of the reporting facility and readmission diagnosis is the same/related to the previous admission
+5 = New patient
+9 = None of the above
+*Name changed according to ICES"
+ENTRY,DAD,DAD::ENTRY_CODE,cat,cat,else,copy,NA,NA,NA,"C = Patient admitted via a clinic of the reporting facility
+D = Direct
+E = Emergency Dept
+N = Newborn
+P = Day Procedure
+S = Stillborn
+*Name changed according to ICES"
+DDATE,DAD,DAD::DISCHARGE_DATE,cont,cont,else,copy,NA,NA,NA,"Discharge date. If it's continous, It's the number of days from ""01-01-1970"".
+* Name changed according to ICES."
+DTIME,DAD,DAD::DISCHARGE_TIME,cat,cat,else,copy,NA,NA,NA,"Discharge time. It's stored as hhmm (e.g. 0855 is 8:55 AM). 9999 is invalid code.
+* Name changed according to ICES."
+INSTTTYP,DAD,DAD::INST_TO_TYPE,cat,cat,else,copy,NA,NA,NA,"0 = Community Based Clinic
+1 = Acute Inpatient Care
+2 = Inpatient Rehabilitation
+3 = Inpatient Complex Continuing Care
+4 = Long-term care (24-hour nursing care)
+5 = Inpatient Psychiatry (Mental Health)
+6 = Nursing Stations
+7 = Special Rehabilitation Facility
+8 = Home Care Program
+9 = Inpatient Palliative Care
+A = Day Surgery
+B = Private Clinic
+C = Correctional Facility
+E = Emergency Department
+F = Other health facility
+G = Group Living/Supportive Housing
+H = Transitional Housing
+J = Other non-health facility
+M = Community Mental Health and Addiction Services
+N = Ambulatory Care Clinic
+P = Hospice/Palliative Care Facility
+S = Sub-Acute
+T = Mental Health and/or Addiction Treatment Centre
+U = Unknown facility 
+*Name changed according to ICES"
+INSTTNUM,DAD,DAD::INST_TO_NUM,cat,cat,else,copy,NA,NA,NA,"The number assigned by the provincial/territorial Ministry or Department of Health of the facility to which the patient was directly transferred for further treatment or care. 
+This can be another health care facility or another level of care within the report facility.  Includes transfers from home care and nursing homes. 
+*Name changed according to ICES"
+DISCHDISP,DAD,DAD::DISCHARGE_DISPOSITION,cat,cat,else,copy,NA,NA,NA,"01 = Transferred to another facility providing inpatient hospital care or acute care inpatient institution/delete value 01 from 2018 onwards
+02 = Transferred to a long term or continuing care facility/delete value 02 from 2018 onwards
+03 = transferred to other ambulatory care, palliative care/hospice, addiction treatment centre, jails, infants and children discharged/detained by social services)/delete value 03 from 2018 onwards
+04 = discharged to a home setting with support services
+05 = Discharged to home (no support service from an external agency required)
+06 = Signed out (against medical advice)/delete value 06 from 2018 onwards
+07 = Died/delete value 07 from 2018 onwards
+08 = Cadaver - admitted for organ/tissue retrieval
+09 = Stillbirth
+10 = Impatient care
+12 = Patients who do not return from a pass (applicable in 2008/09 and onwards)/delete value 12 from 2018 onwards
+20 = ED and ambulatory care
+30 = Residential care
+40 = Group/supportive living
+61 = Absent without leave (AWOL)
+62 = Left against medical advice (LAMA)
+65 = Did not return from pass/leave
+66 = Died while on pass/leave
+67 = Suicide out of facility
+72 = Died in facility
+73 = Medical assistance in dying(MAID)
+74 = Suicide in facility
+90 = Correctional facility
+*Name changed according to ICES"
+PATSERV,DAD,DAD::MAIN_PATIENT_SERVICE,cat,cat,else,copy,NA,NA,NA,"01 = Family Practice
+03 = Emergency
+08 = Extended care prior to April 2002 and then Hospital-specific
+09 = Respite care prior to April 2002 and then Hospital-specific
+10 = General Medicine
+11 = Allergy
+12 = Cardiology
+13 = Dermatology
+14 = Endocrinology
+15 = Gastro-Enterology
+16 = Nephrology
+17 = Neurology
+18 = Respirology
+19 = Rheumatology
+20 = Paed.Medicine
+21 = Paed.Allergy
+22 = Paed.Cardiology
+23 = Paed.Dermatology
+24 = Paed.Endocrinlgy
+25 = Paed.Gas-Entrlgy
+26 = Paed.Nephrology
+27 = Paed.Neurology
+28 = Paed.Respirology
+29 = Paed.Rheumatlgy
+30 = General Surgery
+31 = Cardio Surgery
+32 = Neurosurgery
+33 = Oral Surgery
+34 = Orthopae Surgery
+35 = Plastic Surgery
+36 = Thoracic Surgery
+37 = Transplant Surg
+38 = Traumatology
+39 = Urology
+40 = Paed.Surgery
+41 = Paed.CardioSurg
+42 = Paed.Neurosurg
+43 = Paed.Oral Surg
+44 = Paed.Ortho Surg
+45 = Paed.PlasticSurg
+46 = Paed.Thorac Surg
+47 = Paed.TransplSurg
+48 = Paed.Traumatolgy
+49 = Paed.Urology
+51 = ObstetricsDelvrd
+52 = Obs.Anteprtum
+53 = Obs.Aborted
+54 = Newborn
+55 = Gynaecology
+56 = Paed.Gynecology
+57 = Anaesthesia till March 2002
+58 = Palliative Care
+59 = Obs.Postpartum
+60 = Otolarngology
+61 = Paed.Otolarynglgy
+62 = Opthalmology
+63 = Paed.Opthalmology
+64 = Psychiatry
+65 = Pead.Psychiatry
+66 = Haematology
+67 = Pead.Haematology
+68 = Immunology
+69 = Paed.Immunology
+70 = PhysMed & Rehab
+71 = Paed.PhyMd&Rehab
+72 = Geriatrics
+73 = Chronic Behaviour Disorder Unit till March 2002
+74 = Medical Oncology
+75 = Radiation Oncology
+76 = Rehab.ActCreHosp till March 2000
+79 = Urogynecollogy till March 2006
+80 = Radiology
+81 = Radiation Oncology
+82 = Genetics
+83 = Nuclear Medicine till March 2006
+87 = Dentistry
+88 = Paed.Dentistry
+89 = Stillborn
+90 = Cadaveric Donor
+91 = Podiatry
+95 = Vascular Surgery till March 2006
+96 = Infectious Disease
+97 = Neonatology
+99 = ALC"
+DX10CODE1,DAD,DAD::DIAG_CODE_1,cat,cat,else,copy,NA,NA,NA,https://datadictionary.ices.on.ca/Applications/DataDictionary/Variables.aspx?LibName=DAD&MemName=&Variable=DX10CODE1
+DX10CODE2,DAD,DAD::DIAG_CODE_2,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE3,DAD,DAD::DIAG_CODE_3,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE4,DAD,DAD::DIAG_CODE_4,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE5,DAD,DAD::DIAG_CODE_5,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE6,DAD,DAD::DIAG_CODE_6,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE7,DAD,DAD::DIAG_CODE_7,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE8,DAD,DAD::DIAG_CODE_8,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE9,DAD,DAD::DIAG_CODE_9,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE10,DAD,DAD::DIAG_CODE_10,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE11,DAD,DAD::DIAG_CODE_11,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE12,DAD,DAD::DIAG_CODE_12,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE13,DAD,DAD::DIAG_CODE_13,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE14,DAD,DAD::DIAG_CODE_14,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE15,DAD,DAD::DIAG_CODE_15,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE16,DAD,DAD::DIAG_CODE_16,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE17,DAD,DAD::DIAG_CODE_17,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE18,DAD,DAD::DIAG_CODE_18,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE19,DAD,DAD::DIAG_CODE_19,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE20,DAD,DAD::DIAG_CODE_20,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE21,DAD,DAD::DIAG_CODE_21,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE22,DAD,DAD::DIAG_CODE_22,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE23,DAD,DAD::DIAG_CODE_23,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE24,DAD,DAD::DIAG_CODE_24,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DX10CODE25,DAD,DAD::DIAG_CODE_25,cat,cat,else,copy,NA,NA,NA,Refer to DX10CODE1
+DXTYPE1,DAD,DAD::DIAG_TYPE_1,cat,cat,else,copy,NA,NA,NA,https://datadictionary.ices.on.ca/Applications/DataDictionary/Variables.aspx?LibName=DAD&MemName=&Variable=DXTYPE1
+DXTYPE2,DAD,DAD::DIAG_TYPE_2,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE3,DAD,DAD::DIAG_TYPE_3,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE4,DAD,DAD::DIAG_TYPE_4,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE5,DAD,DAD::DIAG_TYPE_5,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE6,DAD,DAD::DIAG_TYPE_6,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE7,DAD,DAD::DIAG_TYPE_7,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE8,DAD,DAD::DIAG_TYPE_8,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE9,DAD,DAD::DIAG_TYPE_9,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE10,DAD,DAD::DIAG_TYPE_10,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE11,DAD,DAD::DIAG_TYPE_11,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE12,DAD,DAD::DIAG_TYPE_12,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE13,DAD,DAD::DIAG_TYPE_13,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE14,DAD,DAD::DIAG_TYPE_14,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE15,DAD,DAD::DIAG_TYPE_15,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE16,DAD,DAD::DIAG_TYPE_16,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE17,DAD,DAD::DIAG_TYPE_17,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE18,DAD,DAD::DIAG_TYPE_18,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE19,DAD,DAD::DIAG_TYPE_19,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE20,DAD,DAD::DIAG_TYPE_20,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE21,DAD,DAD::DIAG_TYPE_21,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE22,DAD,DAD::DIAG_TYPE_22,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE23,DAD,DAD::DIAG_TYPE_23,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE24,DAD,DAD::DIAG_TYPE_24,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+DXTYPE25,DAD,DAD::DIAG_TYPE_25,cat,cat,else,copy,NA,NA,NA,Refer to DXTYPE1
+INCODE1,DAD,DAD::INT_CODE_1,cat,cat,else,copy,NA,NA,NA,https://datadictionary.ices.on.ca/Applications/DataDictionary/Variables.aspx?LibName=DAD&MemName=&Variable=INCODE1
+INCODE2,DAD,DAD::INT_CODE_2,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INCODE3,DAD,DAD::INT_CODE_3,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INCODE4,DAD,DAD::INT_CODE_4,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INCODE5,DAD,DAD::INT_CODE_5,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INCODE6,DAD,DAD::INT_CODE_6,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INCODE7,DAD,DAD::INT_CODE_7,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INCODE8,DAD,DAD::INT_CODE_8,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INCODE9,DAD,DAD::INT_CODE_9,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INCODE10,DAD,DAD::INT_CODE_10,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INCODE11,DAD,DAD::INT_CODE_11,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INCODE12,DAD,DAD::INT_CODE_12,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INCODE13,DAD,DAD::INT_CODE_13,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INCODE14,DAD,DAD::INT_CODE_14,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INCODE15,DAD,DAD::INT_CODE_15,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INCODE16,DAD,DAD::INT_CODE_16,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INCODE17,DAD,DAD::INT_CODE_17,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INCODE18,DAD,DAD::INT_CODE_18,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INCODE19,DAD,DAD::INT_CODE_19,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INCODE20,DAD,DAD::INT_CODE_20,cat,cat,else,copy,NA,NA,NA,Refer to INCODE1
+INATSTAT1,DAD,DAD::INT_STATUS_ATTRIBUTE_1,cat,cat,else,copy,NA,NA,NA,https://datadictionary.ices.on.ca/Applications/DataDictionary/Variables.aspx?LibName=DAD&MemName=&Variable=INATSTAT1
+INATSTAT2,DAD,DAD::INT_STATUS_ATTRIBUTE_2,cat,cat,else,copy,NA,NA,NA,Refer to INATSTAT1
+INATSTAT3,DAD,DAD::INT_STATUS_ATTRIBUTE_3,cat,cat,else,copy,NA,NA,NA,Refer to INATSTAT1
+INATSTAT4,DAD,DAD::INT_STATUS_ATTRIBUTE_4,cat,cat,else,copy,NA,NA,NA,Refer to INATSTAT1
+INATSTAT5,DAD,DAD::INT_STATUS_ATTRIBUTE_5,cat,cat,else,copy,NA,NA,NA,Refer to INATSTAT1
+INATSTAT6,DAD,DAD::INT_STATUS_ATTRIBUTE_6,cat,cat,else,copy,NA,NA,NA,Refer to INATSTAT1
+INATSTAT7,DAD,DAD::INT_STATUS_ATTRIBUTE_7,cat,cat,else,copy,NA,NA,NA,Refer to INATSTAT1
+INATSTAT8,DAD,DAD::INT_STATUS_ATTRIBUTE_8,cat,cat,else,copy,NA,NA,NA,Refer to INATSTAT1
+INATSTAT9,DAD,DAD::INT_STATUS_ATTRIBUTE_9,cat,cat,else,copy,NA,NA,NA,Refer to INATSTAT1
+INATSTAT10,DAD,DAD::INT_STATUS_ATTRIBUTE_10,cat,cat,else,copy,NA,NA,NA,Refer to INATSTAT1
+INATSTAT11,DAD,DAD::INT_STATUS_ATTRIBUTE_11,cat,cat,else,copy,NA,NA,NA,Refer to INATSTAT1
+INATSTAT12,DAD,DAD::INT_STATUS_ATTRIBUTE_12,cat,cat,else,copy,NA,NA,NA,Refer to INATSTAT1
+INATSTAT13,DAD,DAD::INT_STATUS_ATTRIBUTE_13,cat,cat,else,copy,NA,NA,NA,Refer to INATSTAT1
+INATSTAT14,DAD,DAD::INT_STATUS_ATTRIBUTE_14,cat,cat,else,copy,NA,NA,NA,Refer to INATSTAT1
+INATSTAT15,DAD,DAD::INT_STATUS_ATTRIBUTE_15,cat,cat,else,copy,NA,NA,NA,Refer to INATSTAT1
+INATSTAT16,DAD,DAD::INT_STATUS_ATTRIBUTE_16,cat,cat,else,copy,NA,NA,NA,Refer to INATSTAT1
+INATSTAT17,DAD,DAD::INT_STATUS_ATTRIBUTE_17,cat,cat,else,copy,NA,NA,NA,Refer to INATSTAT1
+INATSTAT18,DAD,DAD::INT_STATUS_ATTRIBUTE_18,cat,cat,else,copy,NA,NA,NA,Refer to INATSTAT1
+INATSTAT19,DAD,DAD::INT_STATUS_ATTRIBUTE_19,cat,cat,else,copy,NA,NA,NA,https://datadictionary.ices.on.ca/Applications/DataDictionary/Variables.aspx?LibName=DAD&MemName=&Variable=INATLOC1
+INATSTAT20,DAD,DAD::INT_STATUS_ATTRIBUTE_20,cat,cat,else,copy,NA,NA,NA,Refer to INATSTAT1
+INATLOC1,DAD,DAD::INT_LOCATION_ATTRIBUTE_1,cat,cat,else,copy,NA,NA,NA,https://datadictionary.ices.on.ca/Applications/DataDictionary/Variables.aspx?LibName=DAD&MemName=&Variable=INATLOC1
+INATLOC2,DAD,DAD::INT_LOCATION_ATTRIBUTE_2,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATLOC3,DAD,DAD::INT_LOCATION_ATTRIBUTE_3,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATLOC4,DAD,DAD::INT_LOCATION_ATTRIBUTE_4,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATLOC5,DAD,DAD::INT_LOCATION_ATTRIBUTE_5,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATLOC6,DAD,DAD::INT_LOCATION_ATTRIBUTE_6,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATLOC7,DAD,DAD::INT_LOCATION_ATTRIBUTE_7,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATLOC8,DAD,DAD::INT_LOCATION_ATTRIBUTE_8,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATLOC9,DAD,DAD::INT_LOCATION_ATTRIBUTE_9,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATLOC10,DAD,DAD::INT_LOCATION_ATTRIBUTE_10,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATLOC11,DAD,DAD::INT_LOCATION_ATTRIBUTE_11,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATLOC12,DAD,DAD::INT_LOCATION_ATTRIBUTE_12,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATLOC13,DAD,DAD::INT_LOCATION_ATTRIBUTE_13,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATLOC14,DAD,DAD::INT_LOCATION_ATTRIBUTE_14,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATLOC15,DAD,DAD::INT_LOCATION_ATTRIBUTE_15,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATLOC16,DAD,DAD::INT_LOCATION_ATTRIBUTE_16,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATLOC17,DAD,DAD::INT_LOCATION_ATTRIBUTE_17,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATLOC18,DAD,DAD::INT_LOCATION_ATTRIBUTE_18,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATLOC19,DAD,DAD::INT_LOCATION_ATTRIBUTE_19,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATLOC20,DAD,DAD::INT_LOCATION_ATTRIBUTE_20,cat,cat,else,copy,NA,NA,NA,Refer to INATLOC1
+INATEXT1,DAD,DAD::INT_EXTENT_ATTRIBUTE_1,cat,cat,else,copy,NA,NA,NA,https://datadictionary.ices.on.ca/Applications/DataDictionary/Variables.aspx?LibName=DAD&MemName=&Variable=INATEXT1
+INATEXT2,DAD,DAD::INT_EXTENT_ATTRIBUTE_2,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+INATEXT3,DAD,DAD::INT_EXTENT_ATTRIBUTE_3,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+INATEXT4,DAD,DAD::INT_EXTENT_ATTRIBUTE_4,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+INATEXT5,DAD,DAD::INT_EXTENT_ATTRIBUTE_5,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+INATEXT6,DAD,DAD::INT_EXTENT_ATTRIBUTE_6,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+INATEXT7,DAD,DAD::INT_EXTENT_ATTRIBUTE_7,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+INATEXT8,DAD,DAD::INT_EXTENT_ATTRIBUTE_8,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+INATEXT9,DAD,DAD::INT_EXTENT_ATTRIBUTE_9,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+INATEXT10,DAD,DAD::INT_EXTENT_ATTRIBUTE_10,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+INATEXT11,DAD,DAD::INT_EXTENT_ATTRIBUTE_11,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+INATEXT12,DAD,DAD::INT_EXTENT_ATTRIBUTE_12,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+INATEXT13,DAD,DAD::INT_EXTENT_ATTRIBUTE_13,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+INATEXT14,DAD,DAD::INT_EXTENT_ATTRIBUTE_14,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+INATEXT15,DAD,DAD::INT_EXTENT_ATTRIBUTE_15,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+INATEXT16,DAD,DAD::INT_EXTENT_ATTRIBUTE_16,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+INATEXT17,DAD,DAD::INT_EXTENT_ATTRIBUTE_17,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+INATEXT18,DAD,DAD::INT_EXTENT_ATTRIBUTE_18,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+INATEXT19,DAD,DAD::INT_EXTENT_ATTRIBUTE_19,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+INATEXT20,DAD,DAD::INT_EXTENT_ATTRIBUTE_20,cat,cat,else,copy,NA,NA,NA,Refer to INATEXT1
+ INSERV1,DAD,DAD::INT_PROVIDER_SERVICE_1,cat,cat,else,copy,NA,NA,NA,https://datadictionary.ices.on.ca/Applications/DataDictionary/Variables.aspx?LibName=DAD&MemName=&Variable=INSERV1
+ INSERV2,DAD,DAD::INT_PROVIDER_SERVICE_2,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INSERV3,DAD,DAD::INT_PROVIDER_SERVICE_3,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INSERV4,DAD,DAD::INT_PROVIDER_SERVICE_4,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INSERV5,DAD,DAD::INT_PROVIDER_SERVICE_5,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INSERV6,DAD,DAD::INT_PROVIDER_SERVICE_6,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INSERV7,DAD,DAD::INT_PROVIDER_SERVICE_7,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INSERV8,DAD,DAD::INT_PROVIDER_SERVICE_8,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INSERV9,DAD,DAD::INT_PROVIDER_SERVICE_9,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INSERV10,DAD,DAD::INT_PROVIDER_SERVICE_10,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INSERV11,DAD,DAD::INT_PROVIDER_SERVICE_11,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INSERV12,DAD,DAD::INT_PROVIDER_SERVICE_12,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INSERV13,DAD,DAD::INT_PROVIDER_SERVICE_13,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INSERV14,DAD,DAD::INT_PROVIDER_SERVICE_14,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INSERV15,DAD,DAD::INT_PROVIDER_SERVICE_15,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INSERV16,DAD,DAD::INT_PROVIDER_SERVICE_16,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INSERV17,DAD,DAD::INT_PROVIDER_SERVICE_17,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INSERV18,DAD,DAD::INT_PROVIDER_SERVICE_18,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INSERV19,DAD,DAD::INT_PROVIDER_SERVICE_19,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INSERV20,DAD,DAD::INT_PROVIDER_SERVICE_20,cat,cat,else,copy,NA,NA,NA,Refer to INSERV1
+ INLOC1,DAD,DAD::INT_LOCATION_1,cat,cat,else,copy,NA,NA,NA,https://datadictionary.ices.on.ca/Applications/DataDictionary/Variables.aspx?LibName=DAD&MemName=&Variable=INLOC1
+ INLOC2,DAD,DAD::INT_LOCATION_2,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+ INLOC3,DAD,DAD::INT_LOCATION_3,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+ INLOC4,DAD,DAD::INT_LOCATION_4,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+ INLOC5,DAD,DAD::INT_LOCATION_5,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+ INLOC6,DAD,DAD::INT_LOCATION_6,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+ INLOC7,DAD,DAD::INT_LOCATION_7,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+ INLOC8,DAD,DAD::INT_LOCATION_8,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+ INLOC9,DAD,DAD::INT_LOCATION_9,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+ INLOC10,DAD,DAD::INT_LOCATION_10,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+ INLOC11,DAD,DAD::INT_LOCATION_11,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+ INLOC12,DAD,DAD::INT_LOCATION_12,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+ INLOC13,DAD,DAD::INT_LOCATION_13,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+ INLOC14,DAD,DAD::INT_LOCATION_14,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+ INLOC15,DAD,DAD::INT_LOCATION_15,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+ INLOC16,DAD,DAD::INT_LOCATION_16,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+ INLOC17,DAD,DAD::INT_LOCATION_17,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+ INLOC18,DAD,DAD::INT_LOCATION_18,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+ INLOC19,DAD,DAD::INT_LOCATION_19,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+ INLOC20,DAD,DAD::INT_LOCATION_20,cat,cat,else,copy,NA,NA,NA,Refer to INLOC1
+INATEC1,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_1,cat,cat,else,copy,NA,NA,NA,https://datadictionary.ices.on.ca/Applications/DataDictionary/Variables.aspx?LibName=DAD&MemName=&Variable=INATEC1
+INATEC2,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_2,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+INATEC3,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_3,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+INATEC4,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_4,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+INATEC5,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_5,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+INATEC6,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_6,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+INATEC7,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_7,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+INATEC8,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_8,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+INATEC9,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_9,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+INATEC10,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_10,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+INATEC11,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_11,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+INATEC12,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_12,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+INATEC13,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_13,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+INATEC14,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_14,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+INATEC15,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_15,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+INATEC16,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_16,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+INATEC17,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_17,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+INATEC18,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_18,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+INATEC19,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_19,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+INATEC20,DAD,DAD::INT_ANAESTHETIC_TECHNIQUE_20,cat,cat,else,copy,NA,NA,NA,Refer to INATEC1
+LOS,DAD,DAD::TOTAL_LENGTH_OF_STAY,cont,cont,else,copy,NA,NA,NA,NA
+ACUTELOS,DAD,DAD::ACUTE_LENGTH_OF_STAY,cont,cont,else,copy,NA,NA,NA,NA
+ALCLOS,DAD,DAD::ALC_LENGTH_OF_STAY,cont,cont,else,copy,NA,NA,NA,NA
+HDP_PTN,DAD,DAD::HDP_PTN,cont,cat,"[0,Inf]",copy,NA,NA,NA,unique identifier
+ADHRecord_Key,DAD,DAD::ADHRECORD_KEY,cont,cat,else,copy,NA,NA,NA,NA
