@@ -1,1 +1,2 @@
 We only added variables from StgDAD1 file. There are a few variable name inconsistencies in different fiscal years. So, for the basic details sheets we splitted the data into 2010-2021 and 2022-2023 DAD files. Specifically, ADHRECORD_KEY is different in the two.  
+HDP_PTN as the unique identifier that enables individual-level linkage across different tables has values as "-99" for some records. We curated them as "NA" as the value does not represent a unuqie individual and might cause miscalcualtions in cohort creation and linkage. 
