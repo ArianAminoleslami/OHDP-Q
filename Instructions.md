@@ -14,3 +14,5 @@
 6. To add an existing derived variable from the Derived Variables Library (DVL), add the path to the library (a .csv file), and select your preferred derived variables, add to the table and update your existing details sheet.
 
 ![3](https://github.com/ArianAminoleslami/OHDP-Q/assets/137816738/c9e16328-7dc7-413b-a182-fbc683d142a4)
+
+7. Finally, in the "Recodeflow" tab, adjust the chunk size (number of rows that are imported, recoded, and stored) considering your avalable memory, and click on the "Recode the dataset!" button. 
