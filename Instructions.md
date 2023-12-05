@@ -1,8 +1,8 @@
 **How to run the EHR's data harmonization app using an existing variable details sheet**
 
 1. Run the app, choose large pipe-delimited CSV's, Multiple, and .sqlite (as shown in the picture).
-2. item Add the path to the folder where your original file/files are located.
-3. item Add a path to a desired .sqlite database (you don't need to create the database, the app does that automatically and you only need to put .sqlite extension at the end of the path.)
+2. Add the path to the folder where your original file/files are located.
+3. Add a path to a desired .sqlite database (you don't need to create the database, the app does that automatically and you only need to put .sqlite extension at the end of the path.)
 
 ![1](https://github.com/ArianAminoleslami/OHDP-Q/assets/137816738/05553d72-bd3b-4502-a678-44fa05dfadbc)
 
@@ -16,3 +16,5 @@
 ![3](https://github.com/ArianAminoleslami/OHDP-Q/assets/137816738/c9e16328-7dc7-413b-a182-fbc683d142a4)
 
 7. Finally, in the "Recodeflow" tab, adjust the chunk size (number of rows that are imported, recoded, and stored) considering your avalable memory, and click on the "Recode the dataset!" button. 
+
+<img width="728" alt="4" src="https://github.com/ArianAminoleslami/OHDP-Q/assets/137816738/2008a64b-f838-470d-9ffb-4002158b8a63">
