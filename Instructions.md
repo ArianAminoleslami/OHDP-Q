@@ -9,3 +9,8 @@
 4. In the "variable details sheet" tab, upload your existing variable details sheet.
 
 <img width="877" alt="2" src="https://github.com/ArianAminoleslami/OHDP-Q/assets/137816738/e756a6b1-7fa6-4ce7-8eb3-4564a55151df">
+
+5. Make sure to add the database name of your existing details sheet in the top box of the sidebar panel.
+6. To add an existing derived variable from the Derived Variables Library (DVL), add the path to the library (a .csv file), and select your preferred derived variables, add to the table and update your existing details sheet.
+
+![3](https://github.com/ArianAminoleslami/OHDP-Q/assets/137816738/c9e16328-7dc7-413b-a182-fbc683d142a4)
